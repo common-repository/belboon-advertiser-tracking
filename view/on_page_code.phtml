@@ -1,0 +1,35 @@
+<!-- BELBOON - PERFORMANCE MARKETING NETWORK tracking solution code for click and pageimpression version 5.00 -->
+<script type="text/javascript">
+
+    (function () {
+        window.itsClickPI = {
+
+            // This is the web page address OR a short description of the conversion page.
+            // Examples: www.shop.com/dresses/red-dress123.html, Check-Out, Registration Complete
+            // Your possible siteIds are: 'home', 'category', 'product', 'basket', 'checkout',
+            siteId        : '<?php echo $sid;?>',
+
+            // The complete Browser-URL on which the tag was fired. Used to increase accuracy in case of strict referrer browser policy.
+            locationHref  : window.location.href,
+            locationRrf   : window.document.referrer,
+
+
+            // DO NOT CHANGE. The following parameters are used to identify the advertiser and the tracking domain.
+            advId         : '<?php echo $advertiser_id;?>',
+            trcDomain     : '<?php echo $tracking_domain;?>'
+
+        };
+
+        // DO NOT CHANGE. The following lines assure tracking functionality.
+        var en = function(v) {if (v) {if (typeof(encodeURIComponent) == 'function') {return (encodeURIComponent(v));}return (escape(v));}};var ts = function() {var d = new Date();var t = d.getTime();return (t);};var im = function(s) {if (document.images) {if (typeof(ia) != 'object') {var ia = new Array();}var i = ia.length;ia[i] = new Image();ia[i].src = s;ia[i].onload = function() {};} else {document.write('<img src="' + s + '" height="1" width="1" border="0" alt="" style="display:none;">');}};var pr = 'https:';var cp = function(o) {var v = 'tst=' + ts();if (o.siteId) {v += '&sid=' + en(o.siteId);}if (o.locationRrf) {v += '&rrf=' + en(o.locationRrf);}if (o.locationHref) {v += '&hrf=' + en(o.locationHref);}v += '&ver='+en('5.00');if (o.paramRef) {v += '&prf=' + en(o.paramRef);}if (o.userVal1) {v += '&uv1=' + en(o.userVal1);}if (o.userVal2) {v += '&uv2=' + en(o.userVal2);}if(o.custId){v+='&csi='+en(o.custId);}if(o.sessionId){v+='&session='+en(o.sessionId);}if (o.productId) { v += '&pid=' + en(o.productId);}v += '&rmd=0';var s = (screen.width) ? screen.width : '0';s += 'X';s += (screen.height) ? screen.height : '0';s += 'X';s += (screen.colorDepth) ? screen.colorDepth : '0';v += '&scr=' + s;v += '&nck=';v += (navigator.cookieEnabled) ? navigator.cookieEnabled : 'null';v += '&njv=';v += (navigator.javaEnabled()) ? navigator.javaEnabled() : 'null';if (o.gdpr) {v += '&gdpr=' + en(o.gdpr);}if (o.gdprConsent) {v += '&gdpr_consent=' + en(o.gdprConsent);}return (v);};var itsStartCPI = function(o) {var s = pr + '//' + o.trcDomain + '/ts/' + o.advId + '/tsc?' + cp(o);im(s);};itsStartCPI(itsClickPI);
+
+        var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true; a.src = 'https://'+itsClickPI.trcDomain+'/scripts/ts/'+itsClickPI.advId+'contC.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(a, s);
+    })();</script>
+<noscript>
+    <!-- SET THE SAME VALUES FOR THE NOSCRIPT PART HERE -->
+    <!-- Any ${PLACEHOLDER_NAME} needs to be replaced -->
+    <!-- Special characters have to be URL-encoded. -->
+    <!-- gdpr: '0' GDPR does not apply; '1' GDPR applies -->
+    <!-- gdpr_consent: Only meaningful if gdpr=1. URL-safe base64-encoded TC string obtained from the CMP JS API or OpenRTB. Must contain consent for Vendor ID of advertiser or for 871 as default  -->
+    <img src="https://<?php echo $tracking_domain;?>/ts/<?php echo $advertiser_id;?>/tsc?&rmd=0&sid=<?php echo $sid;?>&ver=5.00" width="1" height="1" border="0" style="display:none;">
+</noscript>

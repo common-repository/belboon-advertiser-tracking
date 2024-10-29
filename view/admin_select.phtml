@@ -1,0 +1,49 @@
+<?php /** @var BelboonAdvertiserTrackingPlugin $belboon_plugin */;?>
+<div class="wrap">
+	<div class="bb-option-container smaller">
+		<div class="bb-option-box">
+			<div class="bb-inner-head">
+				<img src="<?php echo plugins_url('../assets/img/belboon_logo.svg?v='.BELBOON_TACKING_VERSION, __FILE__);?>" />
+				<h1>
+					<?php _e("WooCommerce Advertiser Plugin", BELBOON_TACKING_TEXTDOMAIN);?>
+				</h1>
+			</div>
+			<div class="bb-inner-col">
+				<h2>
+					<?php _e("Select your advertiser account.", BELBOON_TACKING_TEXTDOMAIN);?>
+				</h2>
+				<p>
+					<?php _e("We found multiple advertiser accounts for the provided API Key. Please select the one you want to connect.", BELBOON_TACKING_TEXTDOMAIN);?>
+				</p>
+				<?php
+//					echo '<pre class="pre-dump">';
+//					var_dump($advertisers);
+//					echo '</pre>';
+				?>
+				<form method="POST" action="">
+					<div>
+						<select
+							class="bb-input-full"
+							name="<?php echo BelboonAdvertiserTrackingPlugin::API_KEY_SELECT_POST_KEY;?>"
+						>
+							<?php foreach($belboon_plugin->getAdvertisers() as $advertiser):?>
+								<option value="<?php echo $advertiser->wsApiKey;?>">
+									<?php echo $advertiser->name;?> (ID: <?php echo $advertiser->advertiserId;?>)
+								</option>
+							<?php endforeach;?>
+						</select>
+					</div>
+					<div>
+						<?php
+							$nonceKey = BelboonAdvertiserTrackingPlugin::BB_ADMIN_SELECT_NONCE;
+							wp_nonce_field($nonceKey, $nonceKey.'_field');
+						?>
+						<button type="submit" name="<?php echo BelboonAdvertiserTrackingPlugin::BB_ADMIN_SELECT_POST_SUBMIT;?>" class="button bb-button">
+							<?php _e('Select Advertiser Account', BELBOON_TACKING_TEXTDOMAIN);?>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

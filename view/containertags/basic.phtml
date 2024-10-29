@@ -1,0 +1,17 @@
+<?php
+	if(isset($domain) === false) { $domain = BelboonAdvertiserTrackingPlugin::CONTAINER_TAGS_URL; }
+	if(isset($mid) === false) { $mid = ''; }
+	if(isset($page) === false) { $page = 'start'; }
+?>
+<?php if($mid !== ''):?>
+	<script type="text/javascript">
+	    (function(d) {
+	        var s = d.createElement("script");
+	        s.async = true;
+	        s.src = (d.location.protocol == "https:" ? "https:" : "http:")
+		        + "//<?php echo $domain;?>/js/<?php echo $mid;?>/<?php echo $page;?>/script.js";
+	        var a = d.getElementsByTagName("script")[0];
+	        a.parentNode.insertBefore(s, a);
+	    }(document));
+	</script>
+<?php endif;?>

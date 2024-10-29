@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-06-09 12:19+0300\n"
+"PO-Revision-Date: 2023-06-09 12:19+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/belboon-advertiser-tracking-plugin.php:135
+msgid "Once Weekly"
+msgstr ""
+
+#: classes/belboon-advertiser-tracking-plugin.php:234
+msgid "Belboon Tracking"
+msgstr "Belboon Tracking"
+
+#: classes/belboon-advertiser-tracking-plugin.php:237
+#, fuzzy
+#| msgid "Belboon Tracking"
+msgid "Belboon Tracking: Category Mapping"
+msgstr "Belboon Tracking"
+
+#: classes/belboon-advertiser-tracking-plugin.php:237
+msgid "Category Mapping"
+msgstr ""
+
+#: view/admin.phtml:15
+msgid "Advertiser ID"
+msgstr "Advertiser ID"
+
+#: view/admin.phtml:25
+msgid "Tracking Domain"
+msgstr "Tracking del dominio"
+
+#: view/admin.phtml:35 view/admin_setup.phtml:22
+msgid "API Key"
+msgstr ""
+
+#: view/admin.phtml:43
+#, php-format
+msgid ""
+"You don't have an API yet? Contact <a href=\"%1$s\">our technical support</"
+"a> to get yours. Please <a href=\"%1$s\">click here</a> to contact our "
+"support team."
+msgstr ""
+
+#: view/admin.phtml:50
+msgid "Key is valid"
+msgstr ""
+
+#: view/admin.phtml:52
+msgid "Key is invalid"
+msgstr ""
+
+#: view/admin.phtml:60
+msgid "Container Tag"
+msgstr ""
+
+#: view/admin.phtml:71
+msgid "Enable Container Tag implementation"
+msgstr ""
+
+#: view/admin_notice.phtml:10
+#, php-format
+msgid ""
+"The belboon Advertiser Tracking Plugin is activated but no Advertiser ID is "
+"entered. Orders will not be tracked. <a href=\"%s\">Please click here to add "
+"or get your Advertiser ID to activate the tracking.</a>"
+msgstr ""
+"Il Belboon Advertiser tracking plugin é stato attivato senza Advertiser ID. "
+"Gli ordini non verranno tracciati. <a href=\"%s\">Clicca qui per aggiungere "
+"o ricevere il tuo Advertiser ID per attivare il tracking.</a>"
+
+#: view/admin_setup.phtml:8
+msgid "WooCommerce Advertiser Plugin"
+msgstr "WooCommerce Advertiser Plugin"
+
+#: view/admin_setup.phtml:13
+msgid "You already have a belboon Advertiser Account?"
+msgstr "Hai giá un account Advertiser in belboon?"
+
+#: view/admin_setup.phtml:16
+#, fuzzy
+#| msgid "Then enter your 6-digit Advertiser ID and activate your account."
+msgid "Then enter your belboon API Key and activate your account."
+msgstr "Inserisci il tuo Advertiser ID (6 Caratteri) e attiva il tuo account."
+
+#: view/admin_setup.phtml:27
+msgid "Activate your accout"
+msgstr "Attiva il tuo account"
+
+#: view/admin_setup.phtml:38
+msgid "You don't have a belboon Advertiser Account yet?"
+msgstr "Non hai ancora un Account Advertiser?"
+
+#: view/admin_setup.phtml:41
+#, fuzzy
+#| msgid "Then contact us and request your Advertiser ID."
+msgid "Then contact us and request your belboon API Key."
+msgstr "Quindi Contattaci e Richiedi il tuo Advertiser ID."
+
+#: view/admin_setup.phtml:56
+msgid "Error! Please check your email and try it again later."
+msgstr "Errore! Per favore controlla la tua E-mail e riprova piú tardi."
+
+#: view/admin_setup.phtml:60
+msgid ""
+"Success! Thank you for being interessted in our service! Our Team will get "
+"in touch with you soon!"
+msgstr ""
+"Fatto! Grazie per il tuo interesse nel nostro servizio! Il nostro Team ti "
+"contatterá presto!"
+
+#: view/admin_setup.phtml:68
+msgid "Email"
+msgstr "E-Mail"
+
+#: view/admin_setup.phtml:73
+msgid "Get your belboon API Key"
+msgstr ""
+
+#: view/admin_sidebar.phtml:4
+msgid "Status:"
+msgstr ""
+
+#: view/admin_sidebar.phtml:8
+msgid "Tracking is active"
+msgstr ""
+
+#: view/admin_sidebar.phtml:10
+msgid "Tracking is not active"
+msgstr ""
+
+#: view/admin_sidebar.phtml:17
+#, fuzzy
+#| msgid "Advertiser ID"
+msgid "Advertiser ID:"
+msgstr "Advertiser ID"
+
+#: view/admin_sidebar.phtml:26
+msgid "MID:"
+msgstr ""
+
+#: view/admin_sidebar.phtml:35
+msgid "Active Tracking Domain:"
+msgstr ""
+
+#: view/admin_sidebar.phtml:45
+msgid "Plugin Version:"
+msgstr ""
+
+#: view/admin_sidebar.phtml:52
+msgid "You need some help?"
+msgstr "Hai bisogno di Aiuto?"
+
+#: view/admin_sidebar.phtml:54
+msgid ""
+"You have a question about our service or a problem with the integration of "
+"the plugin? Just contact us with a click on the button."
+msgstr ""
+"Hai domande riguardo il nostro servizio o riscontri problemi con l"
+"´integrazione del plugin? Contattaci con un semplice click."
+
+#: view/admin_sidebar.phtml:56
+msgid "Contact us"
+msgstr "Contattaci"
+
+#: view/cat_mapping.phtml:15
+msgid "Shop Categories"
+msgstr ""
+
+#: view/cat_mapping.phtml:18
+#, fuzzy
+#| msgid "Tracking Domain"
+msgid "Tracking Categories"
+msgstr "Tracking del dominio"
+
+#: view/cat_mapping.phtml:51
+msgid "Save Category Mapping"
+msgstr ""
+
+#~ msgid "Get your Advertiser ID"
+#~ msgstr "Ottieni il tuo Advertiser-ID"

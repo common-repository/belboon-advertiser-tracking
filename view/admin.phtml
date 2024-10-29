@@ -1,0 +1,96 @@
+<?php /** @var BelboonAdvertiserTrackingPlugin $belboon_plugin */;?>
+<?php $belboon_plugin->getDataFromAPI();?>
+<?php $apiKeyIsValid = $belboon_plugin->getApiKey() !== '' && $belboon_plugin->isApiKeyValid();?>
+<div class="wrap">
+	<h1>
+		<?php esc_html_e('belboon WooCommerce Advertiser Plugin', BELBOON_TACKING_TEXTDOMAIN);?>
+	</h1>
+	<div class="bb-option-container">
+		<div class="bb-option-box left">
+			<form method="post" action="">
+				<table class="form-table">
+                    <?php if($apiKeyIsValid === true):?>
+	                    <tr valign="top">
+	                        <th scope="row"><?php _e("Advertiser Name", BELBOON_TACKING_TEXTDOMAIN);?></th>
+	                        <td>
+	                            <?php echo $belboon_plugin->getAdvertiserName();?>
+	                        </td>
+	                    </tr>
+	                    <tr valign="top">
+	                        <th scope="row"><?php _e("Advertiser ID", BELBOON_TACKING_TEXTDOMAIN);?></th>
+	                        <td>
+	                            <?php echo $belboon_plugin->getAdvertiserId();?>
+	                        </td>
+	                    </tr>
+	                    <tr valign="top">
+	                        <th scope="row"><?php _e("Tracking Domain", BELBOON_TACKING_TEXTDOMAIN);?></th>
+	                        <td>
+		                        <?php echo $belboon_plugin->getTrackingDomain();?>
+	                        </td>
+	                    </tr>
+                    <?php endif?>
+					<tr valign="top">
+						<th scope="row"><?php _e("API Key", BELBOON_TACKING_TEXTDOMAIN);?></th>
+						<td>
+							<input type="text" class="bb-input-long" name="<?php echo BelboonAdvertiserTrackingPlugin::API_KEY_UPDATE_POST_KEY;?>" value="<?php echo $belboon_plugin->getApiKey();?>" />
+							<div class="bb-small">
+								<?php
+                                    if($belboon_plugin->getApiKey() === '') {
+	                                    printf(
+		                                    __(
+			                                    'You don\'t have an API yet? Contact <a href="%1$s">our technical support</a> to get yours. Please <a href="%1$s">click here</a> to contact our support team.',
+			                                    BELBOON_TACKING_TEXTDOMAIN
+		                                    ),
+		                                    'mailto:' . BelboonAdvertiserTrackingPlugin::BB_CONTACT_MAIL
+	                                    );
+                                    } else {
+                                        if($apiKeyIsValid === true) {
+                                            echo '✅ ' . __("Key is valid", BELBOON_TACKING_TEXTDOMAIN);
+                                        } else {
+                                            echo '❌ ' . __("Key is invalid", BELBOON_TACKING_TEXTDOMAIN);
+                                        }
+									}
+								?>
+                            </div>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row"><?php _e("Container Tag", BELBOON_TACKING_TEXTDOMAIN);?></th>
+						<td>
+							<?php
+								$useContainerTag = $belboon_plugin->useContainerTag() === true;
+
+								$checked = '';
+								if($useContainerTag === true) {
+									$checked = ' checked="checked"';
+								}
+							?>
+							<label>
+								<input name="<?php echo BelboonAdvertiserTrackingPlugin::OPTION_USE_CONTAINER_TAG_POST_KEY;?>" value="1" type="checkbox"<?php echo $checked;?> /> <?php _e("Enable Container Tag implementation", BELBOON_TACKING_TEXTDOMAIN);?>
+							</label>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row">&nbsp;</th>
+						<td>
+							<?php
+								$nonceKey = BelboonAdvertiserTrackingPlugin::BB_ADMIN_NONCE;
+								wp_nonce_field($nonceKey, $nonceKey.'_field');
+							?>
+							<button type="submit" name="<?php echo BelboonAdvertiserTrackingPlugin::BB_ADMIN_POST_SUBMIT;?>" class="button bb-button">
+								<?php _e('Submit', BELBOON_TACKING_TEXTDOMAIN);?>
+							</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="right">
+			<?php
+				echo $belboon_plugin->getView(
+					'admin_sidebar'
+				);
+			?>
+		</div>
+	</div>
+</div>

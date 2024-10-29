@@ -1,0 +1,65 @@
+<?php /** @var BelboonAdvertiserTrackingPlugin $belboon_plugin */;?>
+<?php /** @var $productCategories */;?>
+<?php /** @var $trackingCategories */;?>
+<?php /** @var $categoryMapping */;?>
+<div class="wrap">
+	<h1>
+		<?php esc_html_e('belboon Tracking: Category Mapping', BELBOON_TACKING_TEXTDOMAIN);?>
+	</h1>
+	<div class="bb-option-container">
+		<div class="bb-option-box left">
+			<form method="post" action="">
+				<table class="form-table">
+                    <tr valign="top">
+                        <td width="180px">
+							<strong><?php _e('Shop Categories');?></strong>
+                        </td>
+                        <td>
+                            <strong><?php _e('Tracking Categories');?></strong>
+                        </td>
+                    </tr>
+                    <?php foreach ($productCategories as $productCategory):?>
+                        <tr valign="top">
+                            <td width="180px">
+                                <?php echo $productCategory->name;?>
+                            </td>
+                            <td>
+                                <select
+                                    class="bb-input-long"
+                                    name="<?php echo BelboonAdvertiserTrackingPlugin::CAT_MAPPING_POST_KEY;?>[<?php echo $productCategory->term_id;?>]"
+                                >
+	                                <?php
+		                                $mappedValue = $belboon_plugin->getTrackingCategoryByProductCategoryId(
+			                                $productCategory->term_id,
+			                                $categoryMapping
+		                                );
+			                        ?>
+	                                <?php foreach ($trackingCategories as $key => $name):?>
+                                        <option
+                                            value="<?php echo $key;?>"
+	                                        <?php if($mappedValue === $key) { echo 'selected'; }?>
+                                        >
+                                            <?php echo $name;?>
+                                        </option>
+	                                <?php endforeach;?>
+                                </select>
+                            </td>
+                        </tr>
+                    <?php endforeach;?>
+					<tr valign="top">
+						<td colspan="2">
+                            <input class="button bb-button" type="submit" value="<?php _e('Save Category Mapping', BELBOON_TACKING_TEXTDOMAIN);?>" />
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+        <div class="right">
+            <?php
+	            echo $belboon_plugin->getView(
+		            'admin_sidebar'
+	            );
+            ?>
+        </div>
+	</div>
+</div>

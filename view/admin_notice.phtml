@@ -1,0 +1,17 @@
+<div class="notice notice-error is-dismissible">
+	<?php
+		$path = 'admin.php?page=' . BelboonAdvertiserTrackingPlugin::ADMIN_SLUG;
+		$url = admin_url($path);
+	?>
+	<p>
+		<?php
+			printf(
+				__( 
+					'The belboon Advertiser Tracking Plugin is activated but no Advertiser ID is entered. Orders will not be tracked. <a href="%s">Please click here to add or get your Advertiser ID to activate the tracking.</a>', 
+					BELBOON_TACKING_TEXTDOMAIN
+				),
+				$url
+			);
+		?>
+	</p>
+</div>

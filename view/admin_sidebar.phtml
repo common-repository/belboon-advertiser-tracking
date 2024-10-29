@@ -1,0 +1,28 @@
+<div class="bb-option-box">
+	<div class="bb-status-row">
+		<div class="bb-small">
+			<?php _e("Status:", BELBOON_TACKING_TEXTDOMAIN);?>
+		</div>
+		<?php
+			if($belboon_plugin->trackingIsAcitve() === true) {
+				echo '✅ ' . __("Tracking is active", BELBOON_TACKING_TEXTDOMAIN);
+			} else {
+				echo '❌ ' . __("Tracking is not active", BELBOON_TACKING_TEXTDOMAIN);
+			}
+		?>
+	</div>
+	<div class="bb-status-row">
+		<div class="bb-small">
+			<?php _e("Plugin Version:", BELBOON_TACKING_TEXTDOMAIN);?>
+		</div>
+		<?php echo BELBOON_TACKING_VERSION;?>
+	</div>
+</div>
+<div class="bb-option-box">
+	<img src="<?php echo plugins_url('../assets/img/belboon_logo.svg?v='.BELBOON_TACKING_VERSION, __FILE__);?>" />
+	<h2><?php _e("You need some help?", BELBOON_TACKING_TEXTDOMAIN);?></h2>
+	<p>
+		<?php _e("You have a question about our service or a problem with the integration of the plugin? Just contact us with a click on the button.", BELBOON_TACKING_TEXTDOMAIN);?>
+	</p>
+	<a href="mailto:<?php echo BelboonAdvertiserTrackingPlugin::BB_CONTACT_MAIL;?>" class="button bb-button bb-button-ghost"><?php _e("Contact us", BELBOON_TACKING_TEXTDOMAIN);?></a>
+</div>

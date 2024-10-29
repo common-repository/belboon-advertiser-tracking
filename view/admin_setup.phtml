@@ -1,0 +1,107 @@
+<?php /** @var BelboonAdvertiserTrackingPlugin $belboon_plugin */;?>
+<div class="wrap">
+	<div class="bb-option-container smaller">
+		<div class="bb-option-box bb-inner-grid">
+			<div class="bb-inner-head">
+				<img src="<?php echo plugins_url('../assets/img/belboon_logo.svg?v='.BELBOON_TACKING_VERSION, __FILE__);?>" />
+				<h1>
+					<?php _e("WooCommerce Advertiser Plugin", BELBOON_TACKING_TEXTDOMAIN);?>
+				</h1>
+			</div>
+			<div class="bb-inner-col">
+				<h2>
+					<?php _e("You already have a belboon Advertiser Account?", BELBOON_TACKING_TEXTDOMAIN);?>
+				</h2>
+				<p>
+					<?php _e("Then enter your belboon API Key and activate your account.", BELBOON_TACKING_TEXTDOMAIN);?>
+				</p>
+				<?php
+					if($belboon_plugin->getHasApiError() === true) {
+						echo '<div class="bb-infobox bb-error">';
+						echo __('Error! The entered API Key could not be found.', BELBOON_TACKING_TEXTDOMAIN);
+						echo '</div>';
+					}
+				?>
+				<form method="POST" action="">
+					<div>
+						<input type="text" name="<?php echo BelboonAdvertiserTrackingPlugin::API_KEY_POST_KEY;?>" value="" placeholder="<?php _e("API Key", BELBOON_TACKING_TEXTDOMAIN);?>" />
+					</div>
+					<div>
+						<?php
+							$nonceKey = BelboonAdvertiserTrackingPlugin::BB_ADMIN_SETUP_NONCE;
+							wp_nonce_field($nonceKey, $nonceKey.'_field');
+						?>
+						<button type="submit" name="<?php echo BelboonAdvertiserTrackingPlugin::BB_ADMIN_SETUP_POST_SUBMIT;?>" class="button bb-button">
+							<?php _e('Submit Key', BELBOON_TACKING_TEXTDOMAIN);?>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="bb-inner-col">
+				<h2>
+					<?php _e("You don't have a belboon Advertiser Account yet?", BELBOON_TACKING_TEXTDOMAIN);?>
+				</h2>
+				<p>
+					<?php _e("Then contact us and request your belboon API Key.", BELBOON_TACKING_TEXTDOMAIN);?>
+				</p>
+				<?php
+					$customer_mail = '';
+
+					if(
+						isset($_POST) === true &&
+						isset($_POST[self::FIELD_EMAIL]) === true
+					) {
+						$customer_email = filter_var($_POST[self::FIELD_EMAIL], FILTER_VALIDATE_EMAIL);
+
+						$mail_send = $belboon_plugin->sendNewCustmerRequest();
+
+						if($mail_send === false) {
+							echo '<div class="bb-infobox bb-error">';
+							echo __('Error! Please check your email and try it again later.', BELBOON_TACKING_TEXTDOMAIN);
+							echo '</div>';
+						} else {
+							echo '<div class="bb-infobox bb-success">';
+							echo __('Success! Thank you for being interessted in our service! Our Team will get in touch with you soon!', BELBOON_TACKING_TEXTDOMAIN);
+							echo '</div>';
+							$customer_mail = '';
+						}
+					}
+				?>
+				<form method="post" action="">
+					<div>
+						<input type="email" name="<?php echo BelboonAdvertiserTrackingPlugin::FIELD_EMAIL;?>" value="<?php echo $customer_mail;?>" placeholder="<?php _e('Email', BELBOON_TACKING_TEXTDOMAIN);?>" />
+					</div>
+					<div>
+						<?php
+							submit_button(
+								__('Get your belboon API Key', BELBOON_TACKING_TEXTDOMAIN),
+								'bb-button bb-button-ghost',
+								'submit',
+								false
+							);
+						?>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="bb-option-container smaller">
+		<div class="bb-option-box">
+			<div class="bb-inner-headx">
+				<h2 class="bb-bigger">
+					<?php _e("You already have an Advertiser Account:<br/>How to get your API Key", BELBOON_TACKING_TEXTDOMAIN);?>
+				</h2>
+				<p>
+					<?php _e("Login to the Belboon backend with your Advertiser credentials and navigate to <strong style='white-space:nowrap;'>Access > API-Key Manager</strong>. There you will find the API Key.", BELBOON_TACKING_TEXTDOMAIN);?>
+				</p>
+				<p>
+					<img src="<?php echo plugins_url('../assets/img/belboon_get_api_key_menu.png?v='.BELBOON_TACKING_VERSION, __FILE__);?>" class="bb-res-image" />
+				</p>
+				<a class="bb-button" href="https://ui.service.belboon.com/app/index.html#/login" target="_blank">
+					<?php _e("Login to your belboon account", BELBOON_TACKING_TEXTDOMAIN);?>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

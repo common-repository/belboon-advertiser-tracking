@@ -1,0 +1,233 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-08-31 13:26+0300\n"
+"PO-Revision-Date: 2023-08-31 13:26+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/belboon-advertiser-tracking-plugin.php:153
+msgid "Once Weekly"
+msgstr ""
+
+#: classes/belboon-advertiser-tracking-plugin.php:290
+msgid "Belboon Tracking"
+msgstr ""
+
+#: classes/belboon-advertiser-tracking-plugin.php:293
+msgid "Belboon Tracking: Category Mapping"
+msgstr "Belboon Tracking: Kategorien"
+
+#: classes/belboon-advertiser-tracking-plugin.php:293
+msgid "Category Mapping"
+msgstr "Kategorien"
+
+#: view/admin.phtml:14
+msgid "Advertiser Name"
+msgstr ""
+
+#: view/admin.phtml:20
+msgid "Advertiser ID"
+msgstr ""
+
+#: view/admin.phtml:26
+msgid "Tracking Domain"
+msgstr ""
+
+#: view/admin.phtml:33 view/admin_setup.phtml:27
+msgid "API Key"
+msgstr ""
+
+#: view/admin.phtml:41
+#, php-format
+msgid ""
+"You don't have an API yet? Contact <a href=\"%1$s\">our technical support</"
+"a> to get yours. Please <a href=\"%1$s\">click here</a> to contact our "
+"support team."
+msgstr ""
+"Du hast noch keinen API Key von uns? Kein Problem, kontaktiere einfach <a "
+"href=\"%1$s\">unseren technischen Support</a>. <a href=\"%1$s\">Klicke hier</"
+"a> um unseren Support zu kontaktieren."
+
+#: view/admin.phtml:48
+msgid "Key is valid"
+msgstr "Der API Key ist gültig"
+
+#: view/admin.phtml:50
+msgid "Key is invalid"
+msgstr "Der API Key ist ungültig"
+
+#: view/admin.phtml:58
+msgid "Container Tag"
+msgstr ""
+
+#: view/admin.phtml:69
+msgid "Enable Container Tag implementation"
+msgstr "Container-Tag-Implementierung einschalten"
+
+#: view/admin.phtml:81
+msgid "Submit"
+msgstr "Abschicken"
+
+#: view/admin_notice.phtml:10
+#, php-format
+msgid ""
+"The belboon Advertiser Tracking Plugin is activated but no Advertiser ID is "
+"entered. Orders will not be tracked. <a href=\"%s\">Please click here to add "
+"or get your Advertiser ID to activate the tracking.</a>"
+msgstr ""
+"Das belboon Advertiser Tracking Plugin ist aktiviert, aber es wurde noch "
+"keine Advertiser ID hinterlegt. Dadurch werden derzeit keine Bestellungen "
+"getracked. <a href=\"%s\">Bitte klicke hier um deine Advertiser ID "
+"einzutragen oder eine zu beantragen.</a>"
+
+#: view/admin_select.phtml:8 view/admin_setup.phtml:8
+msgid "WooCommerce Advertiser Plugin"
+msgstr ""
+
+#: view/admin_select.phtml:13
+msgid "Select your advertiser account."
+msgstr "Wähle deinen Advertiser Account aus."
+
+#: view/admin_select.phtml:16
+msgid ""
+"We found multiple advertiser accounts for the provided API Key. Please "
+"select the one you want to connect."
+msgstr ""
+"Wir haben für den angegebenen API-Schlüssel mehrere Inserenten-Konten "
+"gefunden. Bitte wähle das Konto aus, das du verbinden möchtest."
+
+#: view/admin_select.phtml:42
+msgid "Select Advertiser Account"
+msgstr "Advertiser Account auswählen"
+
+#: view/admin_setup.phtml:13
+msgid "You already have a belboon Advertiser Account?"
+msgstr "Du hast bereits einen belboon Advertiser Account?"
+
+#: view/admin_setup.phtml:16
+msgid "Then enter your belboon API Key and activate your account."
+msgstr ""
+"Geben Sie dann Ihren belboon API Key ein und aktivieren Sie Ihren Account."
+
+#: view/admin_setup.phtml:21
+msgid "Error! The entered API Key could not be found."
+msgstr "Fehler! Der eingegebene API-Schlüssel konnte nicht gefunden werden."
+
+#: view/admin_setup.phtml:35
+msgid "Submit Key"
+msgstr "Key abschicken"
+
+#: view/admin_setup.phtml:42
+msgid "You don't have a belboon Advertiser Account yet?"
+msgstr "Du hast noch keinen belboon Advertiser Account?"
+
+#: view/admin_setup.phtml:45
+msgid "Then contact us and request your belboon API Key."
+msgstr "Dann kontaktieren Sie uns und fordern Sie Ihren belboon API Key an."
+
+#: view/admin_setup.phtml:60
+msgid "Error! Please check your email and try it again later."
+msgstr "Fehler! Bitte prüfe deine E-Mail und versuche es später erneut."
+
+#: view/admin_setup.phtml:64
+msgid ""
+"Success! Thank you for being interessted in our service! Our Team will get "
+"in touch with you soon!"
+msgstr ""
+"Nachricht erfolgreich versendet! Vielen Dank, dass Sie sich für unseren "
+"Service interessieren! Unser Team wird sich in Kürze mit Ihnen in Verbindung "
+"setzen!"
+
+#: view/admin_setup.phtml:72
+msgid "Email"
+msgstr "E-Mail"
+
+#: view/admin_setup.phtml:77
+msgid "Get your belboon API Key"
+msgstr "API Key anfordern"
+
+#: view/admin_setup.phtml:93
+msgid "You already have an Advertiser Account:<br/>How to get your API Key"
+msgstr ""
+"Du hast bereits ein Advertiser-Konto:<br/>Hier findest du deinen API-"
+"Schlüssel"
+
+#: view/admin_setup.phtml:96
+msgid ""
+"Login to the Belboon backend with your Advertiser credentials and navigate "
+"to <strong style='white-space:nowrap;'>Access > API-Key Manager</strong>. "
+"There you will find the API Key."
+msgstr ""
+"Melde dich im Belboon-Backend mit deinen Advertiser-Zugangsdaten an und gehe "
+"zu <strong style='white-space:nowrap;'>Access > API-Key Manager</strong>. "
+"Dort findest du deinen API-Key."
+
+#: view/admin_setup.phtml:102
+msgid "Login to your belboon account"
+msgstr "Logge dich in deinem belboon-Konto ein"
+
+#: view/admin_sidebar.phtml:4
+msgid "Status:"
+msgstr ""
+
+#: view/admin_sidebar.phtml:8
+msgid "Tracking is active"
+msgstr "Tracking ist aktiv"
+
+#: view/admin_sidebar.phtml:10
+msgid "Tracking is not active"
+msgstr "Tracking ist nicht aktiv"
+
+#: view/admin_sidebar.phtml:16
+msgid "Plugin Version:"
+msgstr ""
+
+#: view/admin_sidebar.phtml:23
+msgid "You need some help?"
+msgstr "Brauchst du Hilfe?"
+
+#: view/admin_sidebar.phtml:25
+msgid ""
+"You have a question about our service or a problem with the integration of "
+"the plugin? Just contact us with a click on the button."
+msgstr ""
+"Du hast eine Frage zu unserem Service oder ein Problem mit der Integration "
+"des Plugins? Kontaktiere uns einfach mit einem Klick auf dem Button."
+
+#: view/admin_sidebar.phtml:27
+msgid "Contact us"
+msgstr "Kontaktiere uns"
+
+#: view/cat_mapping.phtml:15
+msgid "Shop Categories"
+msgstr "Shop Kategorien"
+
+#: view/cat_mapping.phtml:18
+msgid "Tracking Categories"
+msgstr "Tracking Kategorien"
+
+#: view/cat_mapping.phtml:51
+msgid "Save Category Mapping"
+msgstr "Kategoriezuweisung speichern"
+
+#~ msgid "Activate your accout"
+#~ msgstr "Account aktivieren"
+
+#~ msgid "Active Tracking Domain:"
+#~ msgstr "Aktive Tracking Domain:"
+
+#~ msgid "Legacy Subdomain (inlcudes \".r.\" in the domain)"
+#~ msgstr "Alte Subdomain Version (enthält \".r.\" in der Domain)"
+
+#~ msgid "Please enter a valid Tracking Domain"
+#~ msgstr "Bitte gib eine ordentliche Tracking Domain ein"

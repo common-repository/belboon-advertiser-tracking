@@ -1,0 +1,243 @@
+:root {
+	--color-bb-primary: #50DCA0;
+	--color-bb-secondary: #006c8b;
+	--color-bb-placeholder: #dddddd;
+}
+
+.bb-option-container {
+	max-width: 940px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	color: var(--color-bb-secondary);
+}
+
+.bb-option-container.smaller {
+	max-width: 720px;
+}
+
+.bb-option-container h1,
+.bb-option-container h2 {
+	color: var(--color-bb-secondary);
+}
+
+.bb-option-container p {
+	margin-bottom: 20px;
+}
+
+.bb-option-container > * {
+	margin-bottom: 20px;
+}
+
+
+.bb-inner-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.bb-inner-grid > * {
+	flex: 1;
+}
+
+.bb-inner-head {
+	flex-basis: 100%;
+	padding-bottom: 30px;
+}
+
+.bb-inner-head img {
+	height: auto;
+	max-width: 260px;
+}
+
+.right img {
+	height: auto;
+	max-width: 180px;
+}
+
+.bb-inner-head h1 {
+	font-style: italic;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+
+.bb-inner-col {
+	padding-right: 40px;
+}
+
+.bb-inner-col h2 {
+	margin-top: 0;
+}
+
+h2.bb-bigger {
+	font-size: 22px;
+	line-height: 1.3;
+}
+
+.bb-inner-col + .bb-inner-col {
+	border-left: solid 2px var(--color-bb-secondary);
+	padding-right: 0;
+	padding-left: 40px;
+}
+
+.bb-option-container .left {
+	flex: 1;
+}
+
+.bb-option-container .right {
+	margin-left: 20px;
+	width: 300px;
+}
+
+.bb-option-container .form-table th {
+	width: 150px;
+}
+
+input.bb-inline-input {
+	border: none;
+	border-bottom: solid 1px #ccc;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none !important;
+	padding-left: 4px;
+	padding-right: 4px;
+	width: 110px;
+}
+
+select.bb-input-long,
+input.bb-input-long {
+	width: 100%;
+	max-width: 310px;
+}
+
+select.bb-input-full {
+	width: 100%;
+	max-width: 100% !important;
+}
+
+input.bb-inline-input + span {
+	margin: 0 2px;
+}
+
+input.bb-inline-input + span + span {
+	margin: 0 2px 0 -4px;
+}
+
+.bb-small {
+	font-size: 10px !important;
+	color: #aaa;
+	padding-top: 4px;
+}
+
+.bb-small code {
+	font-size: 10px !important;
+	border-radius: 4px;
+	padding: 2px 4px 1px 4px;
+	color: var(--color-bb-secondary);
+}
+
+@media (max-width: 768px) {
+	.bb-option-container .right {
+		margin-left: 0;
+		max-width: auto;
+		width: 100%;
+	}
+}
+
+.bb-option-box {
+	position: relative;
+	box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	padding: 40px;
+	background: #f9f9f9;
+	border-top: solid 3px var(--color-bb-primary);
+	width: 100%;
+}
+
+.bb-option-box + .bb-option-box {
+	margin-top: 20px;
+}
+
+.bb-option-container .bb-option-box .bb-button {
+	background: var(--color-bb-primary);
+	border: solid 2px var(--color-bb-primary);
+	color: white;
+	text-align: center;
+	display: block;
+	border-radius: 50px;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 6px 16px;
+	transition: .2s;
+	font-size: 16px;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.bb-option-container .bb-option-box a.bb-button {
+	padding-top: 15px;
+	padding-bottom: 14px;
+}
+
+.bb-option-container .bb-option-box .bb-button:hover {
+	border-color: var(--color-bb-secondary);
+	background: var(--color-bb-secondary);
+}
+
+.bb-option-container .bb-option-box .bb-button.bb-button-ghost {
+	background: transparent;
+	color: var(--color-bb-primary);
+}
+
+.bb-option-container .bb-option-box .bb-button.bb-button-ghost:hover {
+	border-color: var(--color-bb-primary);
+	background: var(--color-bb-primary);
+	color: white;
+}
+
+.bb-option-container.smaller input[type="text"],
+.bb-option-container.smaller input[type="email"],
+.bb-option-container.smaller select {
+	width: 100%;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+input.bb-inline-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-bb-placeholder);
+  opacity: 1; /* Firefox */
+}
+
+input.bb-inline-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--color-bb-placeholder);
+}
+
+input.bb-inline-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--color-bb-placeholder);
+}
+
+.bb-infobox {
+	padding: 10px;
+	margin-bottom: 20px;
+	color: white;
+	background: var(--color-bb-secondary);
+	font-weight: bold;
+}
+
+.bb-infobox.bb-error { background: red; }
+.bb-infobox.bb-success { background: var(--color-bb-primary); }
+
+.bb-radio-lbl {
+	display: block;
+	margin: 8px 0;
+}
+
+.bb-status-row + .bb-status-row {
+	margin-top: 8px;
+}
+
+.bb-res-image {
+	width: 100%;
+	height: auto;
+}
